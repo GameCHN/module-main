@@ -1,0 +1,16 @@
+{
+	"name": "ycms/module-main",
+	"type": "wordpress-plugin",
+	"description": "",
+	"authors": [
+		{
+			"name": "YCMS Labs",
+			"email": "ycms.net@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"YC\\Main\\": ""
+		}
+	}
+}

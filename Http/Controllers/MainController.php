@@ -27,6 +27,7 @@ class MainController extends Controller
         //}
 
 
+
         //
         if (WP_ONLY == false) {
 
@@ -70,8 +71,6 @@ class MainController extends Controller
         global $posts, $post, $wp_did_header, $wp_query, $wp_rewrite, $wpdb, $wp_version, $wp, $id, $comment, $user_ID;
 
         $content = '';
-
-
 
         /**
          * Loads the correct template based on the visitor's url
@@ -118,7 +117,6 @@ class MainController extends Controller
 
         if (defined('WP_USE_THEMES') && WP_USE_THEMES) :
 
-
             $template = false;
             if (is_404() && $template = get_404_template()) :
             elseif (is_search() && $template = get_search_template()) :
@@ -149,7 +147,6 @@ class MainController extends Controller
              *
              * @param string $template The path of the template to include.
              */
-
 
 
             if ($template = apply_filters('template_include',$this->defaultView ?: $template)) {

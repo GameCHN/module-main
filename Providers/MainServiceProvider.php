@@ -37,15 +37,16 @@ class MainServiceProvider extends ServiceProvider {
 
 		global $wpdb, $current_site, $wp_did_header;
 
+        global $posts, $post, $wp_did_header, $wp_query, $wp_rewrite, $wpdb, $wp_version, $wp, $id, $comment, $user_ID;
 
-		if (!defined('ABSPATH') && PHP_SAPI != 'cli') {
+        if (!defined('ABSPATH') && PHP_SAPI != 'cli') {
 
 			if (!isset($wp_did_header)) {
 
 
 				$wp_did_header = true;
 
-				require_once(ROOT_PATH . 'app/article/wp-load.php');
+				require_once(ROOT . '/home/wp-load.php');
 
 				wp();
 

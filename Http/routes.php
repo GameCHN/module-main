@@ -8,9 +8,9 @@ Route::group(['prefix' => '', 'namespace' => 'YC\Main\Http\Controllers'], functi
 
     if (PHP_SAPI != 'cli' && WP_ONLY == false) {
         /** Loads the WordPress Environment and Template */
-        require(ROOT . '/app/article/wp-blog-header.php');
-        require_once WP_CORE_DIR.'/init.php';
+        //require(ROOT . '/home/wp-blog-header.php');
     }
+
 
     Route::get('/', 'MainController@index');
     Route::any('{all?}', 'MainController@index')->where('all', '.+');
